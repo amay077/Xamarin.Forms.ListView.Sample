@@ -109,7 +109,7 @@ namespace App1 {
                 "{API Key}", 
                 "{API secret}");
             var responces = await tokens.Search.TweetsAsync(
-                new { q = searchString, count = 30});
+                q => searchString, count => 30);
 
             foreach (var a in responces)
             {
